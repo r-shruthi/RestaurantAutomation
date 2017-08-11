@@ -1,0 +1,82 @@
+﻿<div class="container" ng-controller="ChefMenuController" ng-init="getMenu()">  
+
+  <button type="button" class="btn btn-primary btn-md" ng-click="goToOrders()">Back to Orders</button>
+  <button type="button" class="btn btn-primary btn-md">Logout</button> 
+
+  <h3>Menu</h3>
+  <b style ="color:LimeGreen">{{successMessage}}</b>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"><b>Image</b></div>
+        <div class="divTableCell"><b>Menu Item</b></div>     
+        <div class="divTableCell"><b>Enable/Disable</b></div>
+      </div>
+      <div class="divTableRow" ng-repeat="menu in menus">
+        <div class="divTableCell"><img width="50px" height="50px" ng-src='{{menu.img}}'></div>
+        <div class="divTableCell">{{menu.itemName}}</div>
+        <div  class="divTableCell"><button ng-click="selectMenu($index, menu)" style="float: right;" class="btn btn-primary btn-md">{{menu.isEnabled ? "Disable" : "Enable"}}</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 160px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+</style>

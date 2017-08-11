@@ -1,0 +1,60 @@
+<!-- <h1>Home</h1> -->
+<p>Table Status</p>
+<p>Manager ID: {{globals.currentUser.userinfo.id}}</p>
+  <p>Hello, {{globals.currentUser.userinfo.firstName}} {{globals.currentUser.userinfo.lastName}}!</p>
+<!-- {{db}} -->
+
+<div >
+<center>
+ 
+    <div class=" container" ng-controller="ManTableController" ng-init="getTables()">
+          <!-- <div class="col-lg-12"> -->
+            <p style="align-content:center">
+          
+<table cellspacing="5" cellpadding="3" border="0" style="width:100%; border-collapse:collapse;">
+    <tr ng-repeat="row in table"> 
+       <td ng-click="genID(row,$index)" ng-disabled="rowTable.tableStatus!='Ready'" style="width:23%; margin: 5px" ng-repeat="rowTable in row" class="btn btn-sq-xs" ng-class="{'btn-success':rowTable.tableStatus=='Ready','btn-warning':rowTable.tableStatus!='Ready'}">
+            <span>
+                  Table No. {{ rowTable.tableNumber }}
+                <br>Capacity: {{rowTable.capacity}}<!-- <br>
+                Status:{{rowTable.tableStatus}} -->
+            </span>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+               
+
+                <button ng-click="goToAddTable()" class="tnb btn-sq-xs btn-primary-inline">Manage Tables</button>
+                <button ng-click="showfeedback()" class="tnb btn-sq-xs btn-primary">Show Feedback</button>
+{{successMessage}}
+                <!--<a href="#" class="btn btn-sq-xs btn-success">
+                    Table 2
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-info">
+                    Table 3
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-warning">
+                    Table 4
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-danger">
+                    Table 5
+                </a>-->
+            </p>
+        <!-- </div> -->
+    </div>
+
+</center>
+ 
+
+
+</div>
+
+<!-- <p><a href="#/login">Logout</a></a></p>

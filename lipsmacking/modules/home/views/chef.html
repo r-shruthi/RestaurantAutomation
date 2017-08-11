@@ -1,0 +1,153 @@
+<div class="container" ng-controller="OrderController" ng-init="getOrders()">
+
+<div class="container">
+  <p>Chef ID: {{globals.currentUser.userinfo.id}}</p>
+  <p>Hello, {{globals.currentUser.userinfo.firstName}} {{globals.currentUser.userinfo.lastName}}!</p>
+  <button type="button" class="btn btn-primary btn-md" ng-click="goToInventory()">Inventory</button>
+  <button type="button" class="btn btn-primary btn-md" ng-click="goToChefMenu()">Menu</button>
+  
+  <!-- <button type="button" class="btn btn-primary btn-md">Logout</button> -->
+  <!-- <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Order No.</th>
+        <th>Order</th>
+        <th>Quantity</th>
+        <th>Waiter Id</th>
+        <th>Table Id</th>
+        <th>Customization</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>#100</th>
+        <th>Pasta</th>
+        <th>2</th>
+        <th>W001</th>
+        <th>Table01</th>
+        <th>Very spicy</th>
+        <th>
+    <div class="btn-group">
+  <button type="button" style="color:grey class="btn btn-primary">Work In Progress</button>
+  <button type="button" style="color:red class="btn btn-primary">Ready</button>
+  </div>
+</th>
+      </tr>  
+      <tr>    
+      <th>#200</th>
+        <th>Fried Rice</th>
+        <th>1</th>
+        <th>W005</th>
+        <th>Table03</th>
+        <th>Add mushrooms</th>
+        <th>
+    <div class="btn-group">
+  <button type="button" style="color:grey class="btn btn-primary">Work In Progress</button>
+  <button type="button" style="color:grey class="btn btn-primary">Ready</button>
+  </div>
+</th>
+      </tr>
+      <tr>    
+      <th>#110</th>
+        <th>Noodles</th>
+        <th>4</th>
+        <th>W008</th>
+        <th>Table04</th>
+        <th>No onions</th>
+        <th>
+          <div class="btn-group">
+            <button type="button" style="color:grey class="btn btn-primary">Work In Progress</button>
+            <button type="button" style="color:grey class="btn btn-primary">Ready</button>
+          </div>
+        </th>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <h3>Orders  </h3>
+  <b style ="color:LimeGreen">{{successMessage}}</b>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"><b>Order</b></div>
+        <div class="divTableCell"><b>Quantity</b></div>     
+        <div class="divTableCell"><b>Waiter Id</b></div>
+        <div class="divTableCell"><b>Table Id</b></div>
+        <div class="divTableCell"><b>Status</b></div>
+        <div class="divTableCell"><b>Action</b></div>
+      </div>
+      <div class="divTableRow" ng-repeat="order in orders" >
+        <div class="divTableCell">{{order.ordername}}</div>
+        <div class="divTableCell">{{order.quantity}}</div>     
+        <div class="divTableCell">{{order.waiterId}}</div>
+        <div class="divTableCell">{{order.tableID}}</div>
+        <div class="divTableCell">{{order.orderStatus}}</div>
+        <div  class="divTableCell"><button ng-click="selectOrder($index,order)" class="btn btn-primary btn-md">{{order.orderStatus == "ordered" ? "Start" : order.orderStatus == "Preparing" ? "Finish" : order.orderStatus == "Finished" ? "Remove" : "No Status"}}
+        </button></div>    
+      </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+    /*Start: Food Menu Items article <div table> blocks styling***/
+
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 260px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+
+/*End: Food Menu Items article <div table> blocks styling*****/
+</style>

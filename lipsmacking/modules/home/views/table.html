@@ -1,0 +1,81 @@
+<!-- <h1>Home</h1> -->
+<p>Please select a available table</p>
+Welcome {{globals.currentUser.userinfo.firstName}} {{globals.currentUser.userinfo.lastName}} <br>
+<!-- {{db}} -->
+
+<div >
+<center>
+ 
+    <div class=" container" ng-controller="TableController" ng-init="getTables()">
+          <!-- <div class="col-lg-12"> -->
+            <p style="align-content:center">
+             <span ng-show="showID">Your Order ID is {{GenId}}. Please proceed to the table and enter this number <br>
+             <button ng-click="goToMenu()" class="btn-success">Okay</button></span> 
+               <!--  <table class="table col-lg-12">
+                    <tr>
+                        <td ng-click="goToMenu()" style="margin:5px" ng-repeat="table in table" href="#" class="tnb btn-sq-xs btn-primary">
+                            Table {{table.tableNumber}} <br />
+                            Capacity {{table.capacity}}
+                        </td>
+                    </tr>
+                </table> -->
+<div class="row">
+
+<div class="col-xs-8">
+<table cellspacing="5" cellpadding="3" border="0" style="width:100%; border-collapse:collapse;">
+    <tr ng-repeat="row in table"> 
+       <td ng-click="genID(row,$index)" ng-disabled="rowTable.tableStatus!='Ready'" style="width:23%; margin: 5px" ng-repeat="rowTable in row" class="btn btn-sq-xs" ng-class="{'btn-success':rowTable.tableStatus=='Ready','btn-warning':rowTable.tableStatus!='Ready'}">
+            <span>
+                  Table No. {{ rowTable.tableNumber }}
+                <br>Capacity: {{rowTable.capacity}}<!-- <br>
+                Status:{{rowTable.tableStatus}} -->
+            </span>
+        </td>
+    </tr>
+</table>
+
+</div>
+<div class="col-xs-4">
+<h3>Colour code</h3>
+<div style="height: 25px;" class="btn-success"><span style="text-align: center"><h4>Ready to be occupied</h4></span></div>
+<br>
+<div style="height: 25px" class="btn-warning"><span style="text-align: center"><h4>Occupied</h4></span></div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+               
+
+               <!--  <button ng-click="AddTable()" class="tnb btn-sq-xs btn-primary">Click!</button>
+{{successMessage}} -->
+                <!--<a href="#" class="btn btn-sq-xs btn-success">
+                    Table 2
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-info">
+                    Table 3
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-warning">
+                    Table 4
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-danger">
+                    Table 5
+                </a>-->
+            </p>
+        <!-- </div> -->
+    </div>
+
+</center>
+ 
+
+
+</div>
+
+<!-- <p><a href="#/login">Logout</a></a></p>

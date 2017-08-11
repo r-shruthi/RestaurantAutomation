@@ -1,0 +1,125 @@
+<!-- <h1>Home</h1> -->
+<p>Tables assigned</p>
+
+<!-- {{db}} -->
+<p>Waiter ID: {{globals.currentUser.userinfo.id}}</p>
+  <p>Hello, {{globals.currentUser.userinfo.firstName}} {{globals.currentUser.userinfo.lastName}}!</p>
+<div >
+<center> 
+
+    <div class="container" ng-controller="WaiterController" ng-init="getWaiterTables()">
+    <p style="align-content:left">
+    <table cellspacing="5" cellpadding="3" border="0" style="width:auto; ">
+    <tr ng-repeat="row in waiterTables"> 
+        <td ng-click="selectWaiterTable(rowTable, $index)" ng-disabled="" style="width:auto; margin: 5px" ng-repeat="rowTable in row" class="btn btn-sq-xs" ng-class="{'btn-success':rowTable.tableStatus=='Ready','btn-warning':rowTable.tableStatus=='Occupied','btn-danger':rowTable.tableStatus=='Need to be cleaned'}" >
+            <span>
+                  Table No. {{rowTable.tableNumber}} 
+                  <br>
+                  Status:{{rowTable.tableStatus}}
+            </span>
+        </td>
+    </tr>
+    </table>
+    </p>
+   
+
+    
+    <table ng-show="showtID"  cellspacing="5" cellpadding="3" border="0" style="width:auto; border-collapse:collapse;">
+    <tr>
+        <td>Table Number: </td>
+        <td>{{selTable.tableNumber}}
+    </tr>   
+    </table>
+
+    <div ng-show="showtID" class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"><b>Order</b></div>
+        <div class="divTableCell"><b>Quantity</b></div> 
+        <div class="divTableCell"><b>Customization</b></div>
+        <div class="divTableCell"><b>Status</b></div>
+        <div class="divTableCell"><b>Action</b></div>
+      </div>
+      <div class="divTableRow" ng-repeat="order in tableOrder|filter:tableOrder.tableID=selTable.tableID" >
+        <div class="divTableCell">{{order.ordername}}</div>
+        <div class="divTableCell">{{order.quantity}}</div> 
+        <div class="divTableCell"><textarea style="vertical-align:middle;color:black" valign name="textb" cols="30" rows="2" ng-model="order.cust" ng-value="order.cust"></textarea></div>
+        <div class="divTableCell">{{order.orderStatus}}</div>
+        <div  class="divTableCell"><button ng-click="updateOrder($index,order)" ng-disabled="order.orderStatus!=OrderStatusAllowsEdits" class="btn btn-primary btn-md">Save</button></div>    
+      </div>
+    </div>
+     {{$scope.successMessage}}
+  </div>
+
+
+
+ </div>
+
+  
+  <style type="text/css">
+    /*Start: Food Menu Items article <div table> blocks styling***/
+
+.divTable {
+  display: table;
+  width: auto;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 260px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+
+/*End: Food Menu Items article <div table> blocks styling*****/
+</style>
+    
+</center>
+</div>
+
+<!-- <p><a href="#/login">Logout</a></a></p> -->

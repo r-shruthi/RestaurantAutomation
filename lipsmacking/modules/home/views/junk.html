@@ -1,0 +1,47 @@
+﻿<div >
+<center>
+
+    <div class="row container" ng-controller="TableController">
+        <div class="col-lg-12">
+            <p style="align-content:center">
+                <table class="table">
+                    <tr>
+                        <td ng-click="goToMenu()" style="margin:5px" ng-repeat="table in table" href="#" class="btn btn-sq-xs btn-primary">
+                            Table {{table.TableName}} <br />
+                            Capacity {{table.Capacity}}
+                        </td>
+                    </tr>
+                </table>
+
+                <button ng-click="AddTable()"></button>
+
+                <!--<a href="#" class="btn btn-sq-xs btn-success">
+                    Table 2
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-info">
+                    Table 3
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-warning">
+                    Table 4
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-danger">
+                    Table 5
+                </a>-->
+            </p>
+        </div>
+    </div>
+
+</center>
+ 
+
+
+</div>
+
+
+.controller('TableController',
+    ['$scope','$http',
+    function ($scope,$http) {
+
+
+            $scope.table="table";
+        })

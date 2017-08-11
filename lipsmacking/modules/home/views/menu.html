@@ -1,0 +1,175 @@
+﻿<div class="container" ng-controller="MenuController" ng-init="getMenu()">
+<!-- {{menus}} -->
+
+{{successMessage}}  <center><button ng-click="alertWaiter()" class="btn btn-primary"><h3>Alert Waiter</h3></button></center>
+
+<center><h3>{{msgAert}}</h3></center>
+
+  <h3>Menu</h3>
+<div class="divTable">
+  <div class="divTableBody">
+ <div class="divTableRow">
+<div class="divTableCell"><b>Image</b></div>
+
+<div class="divTableCell"><b>Item Name</b></div>
+     
+      <div class="divTableCell"><b>Price</b></div>
+      <div class="divTableCell"><b>Quantity</b></div>
+
+       <div class="divTableCell"> </div>
+</div>
+
+
+
+    <div class="divTableRow" ng-repeat="menu in menus" >
+      <div class="divTableCell"><img width="50px" height="50px" ng-src='{{menu.img}}'></div>
+
+      <div class="divTableCell">{{menu.itemName}}</div>
+
+     
+      <div class="divTableCell">$ {{menu.price}}</div>
+     
+      <div class="divTableCell"><input style ="width: 30px; color:black" ng-model='menu.Quantity' value="menu.Quantity"></div>
+       <div  class="divTableCell"><button ng-disabled="!menu.isEnabled" ng-click="selectItem($index,menu,menu.Quantity)" style="float: right;" class="btn btn-info">Order</button></div>
+     
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- 
+
+    <table class="table table-hover table-bordered table-inverse">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>isEnabled</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="item in menuitems">
+                <td>{{item.itemName}}</td>
+                <td>{{item.isEnabled}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <br>
+    <button class="btn btn-primary" ng-click="goToConfirmOrder()"><h3>Proceed</h3></button>
+</div>
+
+<style type="text/css">
+    /*Start: Food Menu Items article <div table> blocks styling***/
+
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 160px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+
+/*End: Food Menu Items article <div table> blocks styling*****/
+</style>
+<!-- <style>
+    
+    .futr {
+  background: rgba(225,157,77,0.75);
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 0 1em;
+  display: inline-block;
+}
+
+.futr .naslov {
+  background: #2A252B url(http://dev.analog.si/logo_futr.jpg) 0 0 no-repeat;
+  min-height:125px; 
+  margin-bottom: 50px;
+}
+
+.futr h3 {
+  text-transform: uppercase; 
+  text-align: center;
+  margin-left: 150px;
+  padding: 40px 0 0;
+  font-size: 1.75em;
+  line-height: 0.25em;
+  color: #fff;
+}
+
+.futr p {
+  text-transform: lowercase;
+  text-align: center;
+  margin-left: 150px;
+  padding: 10px 0;
+  font-size: 1.25em;
+  color: #fff;
+}
+
+.futr ul {
+  list-style: none;
+}
+
+.futr ul li {
+  font-size: 1.25em;
+  margin: 20px 30px 0 0;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;  
+  padding: 0 10px 10px;
+}
+
+.futr ul li span {
+  /*float: right; */
+}
+</style> -->

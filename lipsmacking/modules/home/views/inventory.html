@@ -1,0 +1,96 @@
+<div class="container" ng-controller="InventoryController" ng-init="getInventory()">
+
+<div class="container">
+  <p>Chef ID: CH002</p>
+  <p>Chef Name: Clark</p>
+  <button type="button" class="btn btn-primary btn-md" ng-click="goToOrders()">Back to Orders</button>
+  <button type="button" class="btn btn-primary btn-md">Logout</button>  
+
+  <h3>Orders</h3>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"><b>Item Name</b></div>
+        <div class="divTableCell"><b>Quantity</b></div>
+        <div class="divTableCell"><b>Comments</b></div>
+      </div>
+      <div class="divTableRow" ng-repeat="invent in inventory" >
+        <div class="divTableCell">{{invent.itemname}}</div>
+        <div class="divTableCell"><input style ="width: 30px; color:black" ng-model="invent.itemquantity" ng-value="invent.itemquantity"></div>
+        <div class="divTableCell"><textarea style="vertical-align:middle;color:black" valign name="textb" cols="30" rows="2" ng-model="invent.comment" ng-value="invent.comment"></textarea></div>
+      </div>
+    </div>
+  </div>
+  <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell">
+          <button type="button" class="btn btn-primary btn-md" ng-click="updateInventory()">Submit</button>
+        </div>
+        <div class="divTableCell" style ="color:Chartreuse">
+          <b>{{successMessage}}</b>
+        </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+    /*Start: Food Menu Items article <div table> blocks styling***/
+
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 160px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+
+/*End: Food Menu Items article <div table> blocks styling*****/
+</style>

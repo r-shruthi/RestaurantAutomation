@@ -1,0 +1,116 @@
+<div ng-controller="ConfirmOrderController" ng-init="getOrders()">
+
+Your orders
+<!-- {{orders | filter:orders.tableAssignmentId=id}}  -->
+
+
+  <h3>Your ordered items</h3>
+<div class="divTable">
+  <div class="divTableBody">
+ <div class="divTableRow">
+<div class="divTableCell"><b>Item</b></div>
+     
+      <div class="divTableCell"><b>Quantity</b></div>
+      <!--  <div class="divTableCell"> </div> -->
+</div>
+
+
+
+    <div class="divTableRow" ng-repeat="order in orders | filter:orders.tableAssignmentId=id" >
+      <div class="divTableCell">{{order.ordername}}</div>
+      <div class="divTableCell">{{order.quantity}}</div>
+     
+      <!-- <div class="divTableCell">$ {{menu.price}}</div> -->
+      <!--  <div  class="divTableCell"><button ng-disabled="!menu.isEnabled" ng-click="selectItem($index,menu)" style="float: right;" class="btn btn-info">Order</button></div> -->
+     
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- 
+
+    <table class="table table-hover table-bordered table-inverse">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>isEnabled</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="item in menuitems">
+                <td>{{item.itemName}}</td>
+                <td>{{item.isEnabled}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <br>
+ <center><button class="btn btn-info" ng-click="payNFeednack()"><h3>Pay</h3></button></center>   
+</div>
+
+
+<style type="text/css">
+    /*Start: Food Menu Items article <div table> blocks styling***/
+
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRow {
+  background: #333;
+  border-top: 1px solid #999;
+  display: table-row;
+}
+
+.divTableRow-lite {
+  background: #8a6d3b;
+  display: table-row;
+}
+
+.divTableRow-headder {
+  background: rgba(47, 79, 79, .5);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divTableRow-headder p {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.divTableCell,
+.divTableHead {
+  border-top: 1px solid #999;
+  display: table-cell;
+  max-width: 160px;
+  padding: 3px 10px;
+  color: #eee;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: 700;
+}
+
+
+/*End: Food Menu Items article <div table> blocks styling*****/
+</style>

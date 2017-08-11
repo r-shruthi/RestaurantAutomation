@@ -1,0 +1,184 @@
+<div class="container" ng-controller="feedbackController" ng-init="">
+
+
+<div>
+  <h3>Payment Successful <br><br>
+
+  Please share your valuable feedback!
+</h3>
+
+</div>
+<div class="form-group">
+  <label class="col-xs-12 control-label" for="textinput">Name</label> 
+  <br>
+  <div class="col-md-12">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Your suggestions here" class="form-control input-md">
+
+  </div> -->
+</div>
+<div class="divTableCell"><textarea style="color:black" placeholder="Name" valign name="textb" cols="30" rows="2" ng-model="Name" ng-value="feedback.Name"></textarea></div>
+
+<div class="form-group">
+  <label class="col-xs-12 control-label" for="textinput">Email</label>  
+  <div class="col-md-12">
+
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Your suggestions here" class="form-control input-md">
+   
+  </div> -->
+</div>
+<div class="divTableCell"><textarea style="vertical-align:middle;color:black" placeholder="Email" valign name="textb" cols="50" rows="2" ng-model="emailID" ng-value="feedback.emailID"></textarea></div>
+<br>
+
+<!-- <div ui-content-for="title">
+
+</div> -->
+<!-- 
+<div class="scrollable">
+ <div class="scrollable-content section"> -->
+   
+  <form role="form" ng-submit='login()'>
+    <fieldset>
+     <!--  <legend>Login</legend> -->
+
+      <div class="form-group">
+        <div class="form-group">
+          <label class="control-label">How do you rate us?</label>
+          <br>
+          <div class="col-md-5">
+         <div class="container">
+  
+  <button type="button" ng-click="setRating('5')" class="btn btn-default">5</button>
+  <button type="button" ng-click="setRating('4')" class="btn btn-primary">4</button>
+  <button type="button" ng-click="setRating('3')" class="btn btn-success">3</button>
+  <button type="button" ng-click="setRating('2')" class="btn btn-info">2</button>
+  <button type="button" ng-click="setRating('1')" class="btn btn-warning">1</button>
+      
+</div>
+</div>
+          
+
+ <div ng-init="rating = star.rating + 1"></div>
+
+<label class="col-xs-12 control-label"><div class="star-rating" star-rating rating-value="rating"
+
+ data-max="5" on-rating-selected="rateFunction(rating)"></div></label>
+ 
+
+      
+        </div>
+      </div>
+
+          <!-- Multiple Radios -->
+<!-- <div class="form-group">
+  <label class="col-xs-12 control-label" for="radios">Do you like our service?</label>
+  <div class="col-xs-12">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      Yes
+    </label>
+  </div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      No
+    </label>
+  </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- Multiple Checkboxes -->
+<!-- <div class="form-group">
+  <label class="col-xs-12 control-label" for="checkboxes">Mark all facilties you like</label>
+  <div class="col-xs-12">
+  <div class="col-xs-4">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Ambience
+    </label>
+  </div>
+  <div class="col-xs-4">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Service
+    </label>
+  </div>
+   <div class="col-xs-4">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Food Quality
+    </label>
+    <div ng-model="facilties" ng-value="feedback.facilties"></div>
+  </div>
+  </div>
+</div>
+ -->
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-xs-12 control-label" for="textinput">Help us improve with your suggestions if any</label>  
+  <div class="col-md-5">
+
+
+  <div class="divTableCell"><textarea style="vertical-align:middle;color:black" placeholder="Your suggestions here" valign name="textb" cols="70" rows="5" ng-model="suggestions" ng-value="feedback.suggestions"></textarea></div>
+
+  <!-- <div class="divTableCell"><textarea style="vertical-align:middle;color:black" placeholder="Name" valign name="textb" cols="30" rows="2" ng-model="Name" ng-value="feedback.Name"></textarea></div>
+ -->
+
+ <!--  <input id="textinput" name="textinput" type="text" placeholder="Your suggestions here" class="form-control input-md">
+    -->
+  </div>
+</div>
+
+
+
+
+    </fieldset>
+    <br>
+   
+    <!-- <button href="#/" class="btn btn-primary btn-block"> -->
+                    <button type="button" class="btn btn-primary btn-md" ng-click="updatefeedback()">Submit</button>
+
+    <!-- <button href="#/" class="btn btn-primary btn-block">
+      Submit
+    </button> -->
+
+  
+
+  </form>
+  
+<!--  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

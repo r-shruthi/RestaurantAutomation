@@ -1,0 +1,507 @@
+{
+  "menu": [
+    {
+      "id": "0",
+      "itemName": "Fried Rice",
+      "price": 30.5,
+      "description": "steamed rice stir fried with vegetables and/or meat of choice",
+      "isEnabled": false,
+      "category": "Rice/Noodles",
+      "hasNoNuts": true,
+      "img": "/customer/images/food_icon07.jpg",
+      "qty": 1
+    },
+    {
+      "id": "1",
+      "itemName": "Hakka Noodles",
+      "price": 22,
+      "description": "fried noodles tossed with spices and vegetables and/or meat",
+      "isEnabled": true,
+      "category": "Rice/Noodles",
+      "hasNoNuts": true,
+      "img": "/customer/images/food_icon06.jpg",
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "itemName": "Chicken Soup",
+      "price": 6.55,
+      "description": "soup made from chicken, simmered in water, usually with various other ingredients",
+      "isEnabled": true,
+      "category": "Soup",
+      "hasNoNuts": true,
+      "img": "/customer/images/pricing.jpg",
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "itemName": "Chicken Drumsticks",
+      "price": 45,
+      "description": "Fried chicken pieces",
+      "isEnabled": true,
+      "category": "Meat",
+      "hasNoNuts": true,
+      "img": "/customer/images/seeds.jpg",
+      "qty": 1
+    },
+    {
+      "id": 4,
+      "itemName": "Stir fried vegetables",
+      "price": 56.5,
+      "description": "vegetables sauted with a mixture of spices",
+      "isEnabled": true,
+      "category": "Vegetables",
+      "hasNoNuts": true,
+      "img": "/customer/images/kabob.jpg",
+      "qty": 1
+    },
+    {
+      "id": "5",
+      "itemName": "Vegetable Soup",
+      "price": 68,
+      "description": "soup made from chicken, simmered in water, usually with various other ingredients",
+      "isEnabled": true,
+      "category": "Soup",
+      "hasNoNuts": true,
+      "img": "/customer/images/images.jpg",
+      "qty": 1
+    },
+    {
+      "id": 6,
+      "itemName": "Chicken Curry",
+      "price": 79.5,
+      "description": "a typical South Asian curry consists of chicken stewed in an onion and tomato-based sauce",
+      "isEnabled": true,
+      "category": "Meat",
+      "hasNoNuts": true,
+      "img": "/customer/images/images - Copy.jpg",
+      "qty": 1
+    },
+    {
+      "id": "7",
+      "itemName": "Steamed Rice",
+      "price": 21,
+      "description": "plain steamed rice",
+      "isEnabled": true,
+      "category": "Rice/Noodles",
+      "hasNoNuts": true,
+      "img": "/customer/images/icon.jpg",
+      "qty": 1
+    },
+    {
+      "id": 8,
+      "itemName": "Crispy fried mushrooms",
+      "price": 60,
+      "description": "mushrooms tossed with onions and pepper",
+      "isEnabled": true,
+      "category": "Vegetable",
+      "hasNoNuts": true,
+      "img": "/customer/images/food_icon08.jpg",
+      "qty": 1
+    },
+    {
+      "id": 9,
+      "itemName": "Crispy fried babycorn",
+      "price": 54,
+      "description": "pieces of babycorn tossed with onions and pepper",
+      "isEnabled": true,
+      "category": "Vegetable",
+      "hasNoNuts": true,
+      "img": "/customer/images/food_icon07.jpg",
+      "qty": 1
+    }
+  ],
+  "tables": [
+    {
+      "id": "1",
+      "tableNumber": 1,
+      "isEnabled": true,
+      "tableStatus": "Ready",
+      "capacity": 2
+    },
+    {
+      "id": 2,
+      "tableNumber": 2,
+      "isEnabled": true,
+      "tableStatus": "Ready",
+      "capacity": 2
+    },
+    {
+      "id": "5",
+      "tableNumber": 5,
+      "isEnabled": true,
+      "tableStatus": "Ready",
+      "capacity": 4
+    },
+    {
+      "id": 7,
+      "tableNumber": 7,
+      "isEnabled": true,
+      "tableStatus": "Ready",
+      "capacity": 2
+    },
+    {
+      "tableNumber": "12",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "4",
+      "id": "12"
+    },
+    {
+      "tableNumber": "13",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "1",
+      "id": "13"
+    },
+    {
+      "tableNumber": "14",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "4",
+      "id": "r1m_03vNg"
+    },
+    {
+      "tableNumber": "15",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "",
+      "id": "ryy6lRwVg"
+    },
+    {
+      "tableNumber": "16",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "2",
+      "id": "HJmTeRvNl"
+    },
+    {
+      "tableNumber": "17",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "5",
+      "id": "SyP6eAv4x"
+    },
+    {
+      "tableNumber": "18",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "45",
+      "id": "ByjpxRPVl"
+    },
+    {
+      "tableNumber": "19",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "2",
+      "id": "BkCTxRwNl"
+    },
+    {
+      "tableNumber": "21",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "2",
+      "id": "S1U0lAP4x"
+    },
+    {
+      "tableNumber": "22",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "2",
+      "id": "BJYReAwEg"
+    },
+    {
+      "tableNumber": "23",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "3",
+      "id": "ByoCgAvNe"
+    },
+    {
+      "tableNumber": "34",
+      "isEnabled": "True",
+      "tableStatus": "Ready",
+      "capacity": "3",
+      "id": "B1GJ-RvVe"
+    }
+  ],
+  "orders": [
+  ],
+  "inventory": [
+    {
+      "itemname": "Onions",
+      "itemquantity": "12",
+      "comment": "Good Life too nic",
+      "id": "1"
+    },
+    {
+      "itemname": "Potato",
+      "itemquantity": "10",
+      "comment": "need to be refilled hh",
+      "id": "2"
+    },
+    {
+      "itemname": "Chilli",
+      "itemquantity": "13",
+      "comment": "Good",
+      "id": "3"
+    },
+    {
+      "itemname": "Chicken",
+      "itemquantity": "88",
+      "comment": "Running Low",
+      "id": "4"
+    },
+    {
+      "itemname": "Yogurt",
+      "itemquantity": "2",
+      "comment": "Replenish",
+      "id": "5"
+    }
+  ],
+  "customers": [
+    {
+      "id": 0,
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "emailID": "harry.potter@lipsmacking.com",
+      "dob": "1-15-1987"
+    },
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Barnes",
+      "emailID": "joe.barnes@lipsmacking.com",
+      "dob": "5-23-2000"
+    },
+    {
+      "id": 2,
+      "firstName": "Elizabeth",
+      "lastName": "Busch",
+      "emailID": "elizabeth.busch@lipsmacking.com",
+      "dob": "4-7-1963"
+    },
+    {
+      "id": 3,
+      "firstName": "Robert",
+      "lastName": "Pinto",
+      "emailID": "robert.pinto@lipsmacking.com",
+      "dob": "10-17-1976"
+    },
+    {
+      "id": 4,
+      "firstName": "Peter",
+      "lastName": "Gurevich",
+      "emailID": "peter.gurevich@lipsmacking.com",
+      "dob": "11-13-2008"
+    },
+    {
+      "id": 5,
+      "firstName": "Samuel",
+      "lastName": "Ray",
+      "emailID": "samuel.ray@lipsmacking.com",
+      "dob": "12-23-1954"
+    },
+    {
+      "id": 6,
+      "firstName": "Paul",
+      "lastName": "Smith",
+      "emailID": "paul.smith6@lipsmacking.com",
+      "dob": "9-14-1997"
+    },
+    {
+      "id": 7,
+      "firstName": "Amanda",
+      "lastName": "Jones",
+      "emailID": "amanda.jones@lipsmacking.com",
+      "dob": "6-12-2004"
+    },
+    {
+      "id": 8,
+      "firstName": "Angela",
+      "lastName": "Williams",
+      "emailID": "angela.williams@lipsmacking.com",
+      "dob": "2-13-1978"
+    },
+    {
+      "id": 9,
+      "firstName": "Callie",
+      "lastName": "Taylor",
+      "emailID": "callie.taylor@lipsmacking.com",
+      "dob": "8-22-1968"
+    }
+  ],
+  "employees": [
+    {
+      "id": 0,
+      "firstName": "Adolf",
+      "lastName": "Roberts",
+      "roleID": 0,
+      "isEnabled": "true",
+      "username": "man",
+      "password": "man"
+    },
+    {
+      "id": 1,
+      "firstName": "Fairman",
+      "lastName": "Wood",
+      "roleID": 1,
+      "isEnabled": "true",
+      "username": "chef",
+      "password": "chef"
+    },
+    {
+      "id": 2,
+      "firstName": "Dabney",
+      "lastName": "Edwards",
+      "roleID": 2,
+      "isEnabled": "true",
+      "username": "waiter",
+      "password": "waiter"
+    },
+    {
+      "id": 3,
+      "firstName": "Salomon",
+      "lastName": "Turner",
+      "roleID": 1,
+      "isEnabled": "true"
+    },
+    {
+      "id": 4,
+      "firstName": "Bob",
+      "lastName": "Martin",
+      "roleID": 2,
+      "isEnabled": "true",
+      "username": "waiter1",
+      "password": "waiter"
+    },
+    {
+      "id": 5,
+      "firstName": "Pablo",
+      "lastName": "Robinson",
+      "roleID": 2,
+      "isEnabled": "true",
+      "username": "waiter2",
+      "password": "waiter"
+    },
+    {
+      "id": 6,
+      "firstName": "Michael",
+      "lastName": "Clarke",
+      "roleID": 1,
+      "isEnabled": "true"
+    },
+    {
+      "id": 7,
+      "firstName": "Gertha",
+      "lastName": "Duppstadt",
+      "roleID": 2,
+      "isEnabled": "true",
+      "username": "waiter3",
+      "password": "waiter"
+    },
+    {
+      "id": 8,
+      "firstName": "Pam",
+      "lastName": "Thomas",
+      "roleID": 1,
+      "isEnabled": "true"
+    },
+    {
+      "id": 9,
+      "firstName": "Nadia",
+      "lastName": "Brown",
+      "roleID": 3,
+      "isEnabled": "true",
+      "username": "cust1",
+      "password": "cust1"
+    },
+    {
+      "id": 10,
+      "firstName": "to",
+      "lastName": "LipSmacking Restaurant!",
+      "roleID": 3,
+      "isEnabled": "true",
+      "username": "cust",
+      "password": "cust"
+    },
+    {
+      "id": 11,
+      "firstName": "Vinayak",
+      "lastName": "G",
+      "roleID": 2,
+      "isEnabled": "true",
+      "username": "waiter4",
+      "password": "waiter"
+    }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "Manager",
+      "roleID": 0
+    },
+    {
+      "id": 1,
+      "name": "Chef",
+      "roleID": 1
+    },
+    {
+      "id": 2,
+      "name": "Waiter",
+      "roleID": 2
+    }
+  ],
+  "tablesAssignment": []
+   ,
+  "feedback": [
+    {
+      "id": 1,
+      "Name": "Mahesh",
+      "emailID": "mascor1331@gmail.com",
+      "rate": 5,
+      "LikeService": true,
+      "facilties": "Ambience, Food Quality",
+      "suggestions": "You guys are awesome"
+    },
+    {
+      "id": 2,
+      "Name": "Alphy",
+      "emailID": "alphy@gmail.com",
+      "rate": 4,
+      "LikeService": false,
+      "facilties": "Food Quality",
+      "suggestions": "Should have more pizzas"
+    },
+    {
+      "Name": "asd",
+      "emailID": "asd",
+      "rate": "3",
+      "suggestions": "asd",
+      "id": 3
+    },
+    {
+      "Name": "Mahesh",
+      "emailID": "asddsadas",
+      "rate": "4",
+      "suggestions": "asdsasa",
+      "id": 4
+    },
+    {
+      "Name": "ew",
+      "rate": "3",
+      "suggestions": "ewqwq",
+      "id": 5
+    }
+  ],
+  "alerts": [
+    {
+      "tableID": "ByoCgAvNe",
+      "tableNumber": "23",
+      "customerID": 0,
+      "waiterID": 5,
+      "tableStatus": "Occupied",
+      "id": 1
+    }
+  ]
+}

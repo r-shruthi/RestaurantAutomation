@@ -1,0 +1,52 @@
+<div class="container" ng-controller="fbController" ng-init="getfeedback()">
+
+<!--   <button type="button" class="btn btn-primary btn-md" ng-click="goToChefMenu()">Menu</button>
+ -->
+   
+   
+
+<h2>Feedbacks  </h2>
+  <b style ="color:LimeGreen">{{successMessage}}</b>
+  <!-- <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"><b>Name</b></div>
+        <div class="divTableCell"><b>emailID</b></div>     
+        <div class="divTableCell"><b>rate</b></div>
+        <div class="divTableCell"><b>suggestions</b></div>
+        <div class="divTableCell"><b>id</b></div>
+        
+      </div>
+      <div class="divTableRow" ng-repeat="fb in feedback" >
+        <div class="divTableCell">{{fb.Name}}</div>
+        <div class="divTableCell">{{fb.emailID}}</div>     
+        <div class="divTableCell">{{fb.rate}}</div>
+        <div class="divTableCell">{{fb.suggestions}}</div>
+       
+      </div>
+    </div>
+  </div> -->
+
+
+
+<table width="700">
+<tr>
+	<td><strong>Name&nbsp</td>
+	<td><strong>Email ID</td>
+	<td><strong>Rating &nbsp &nbsp</td>
+	<td><strong>Suggestions &nbsp &nbsp</td>
+</tr>	
+<tr ng-repeat="fb in feedback" >
+<td>{{fb.Name}}</td>
+<td>{{fb.emailID}}</td>
+
+<td>{{fb.rate}}</td>
+
+<td>{{fb.suggestions}}</td>
+
+</tr>
+
+</table>
+
+</div>
+

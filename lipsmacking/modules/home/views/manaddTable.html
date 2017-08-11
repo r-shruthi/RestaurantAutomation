@@ -1,0 +1,80 @@
+<!-- <h1>Home</h1> -->
+
+
+<!-- {{db}} -->
+
+<div >
+<center>
+ 
+    <div class=" container" ng-controller="ManTableController" ng-init="getTables()">
+          <!-- <div class="col-lg-12"> -->
+            <p style="align-content:center">
+    <div class="row">   
+    <div class="col-lg-6"> 
+    <p>Table status</p>  
+<table cellspacing="5" cellpadding="3" border="0" style="width:100%; border-collapse:collapse;">
+    <tr ng-repeat="row in table"> 
+       <td ng-click="genID(row,$index)" ng-disabled="rowTable.tableStatus!='Ready'" style="width:30%; margin: 5px" ng-repeat="rowTable in row" class="btn btn-sq-xs" ng-class="{'btn-success':rowTable.tableStatus=='Ready','btn-warning':rowTable.tableStatus!='Ready'}">
+            <span>
+                  Table No. {{ rowTable.tableNumber }}
+                <br>Capacity: {{rowTable.capacity}}<!-- <br>
+                Status:{{rowTable.tableStatus}} -->
+            </span>
+        </td>
+    </tr>
+</table>
+</div>
+<div class="col-lg-6">
+    <p>Add Table</p>  
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Enter Table NUmber</label>
+  <div class="col-xs-10">
+    <input ng-model="tNo" class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-xs-2 col-form-label">Enter Capacity</label>
+  <div class="col-xs-10">
+    <input ng-model="tCap" class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+  </div>
+</div>
+</div>
+
+ <button ng-click="AddTable()" class="tnb btn-sq-xs btn-primary-inline">Add Table</button>
+
+
+
+<button ng-click="DeleteTable()" class="tnb btn-sq-xs btn-primary-inline">Delete Table</button><br>
+ <span style="color:red"> {{errMsg1}}</span>
+<span style="color:red"> {{errMsg2}}</span>
+</div>
+
+
+
+               
+
+               
+{{successMessage}}
+                <!--<a href="#" class="btn btn-sq-xs btn-success">
+                    Table 2
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-info">
+                    Table 3
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-warning">
+                    Table 4
+                </a>
+                <a href="#" class="btn btn-sq-xs btn-danger">
+                    Table 5
+                </a>-->
+            </p>
+        <!-- </div> -->
+    </div>
+
+</center>
+ 
+
+
+</div>
+
+<!-- <p><a href="#/login">Logout</a></a></p>
